@@ -1,0 +1,77 @@
+.Container {
+    width: 600px;
+    height: 300px;
+    background-color: yellow;
+    display: grid;
+    /* grid-template-rows: 50px 50px 50px 50px 50px; */
+    /* grid-template-columns: 200px 200px 200px; */
+    /* grid-template-columns: auto auto auto; */
+    grid-template-rows: repeat(5, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* row-gap: 10px;
+    column-gap: 30px; */
+    /* grid-gap: 10px 30px; */
+    grid-gap: 10px;
+}
+
+.item {
+    background-color: greenyellow;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.one {
+    text-align: center;
+    background-color: greenyellow;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* grid-column: 1/4; */
+     grid-column: 1/span 3;
+    border: 1px solid black;
+}
+
+#box {
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+    /* animation-name: fontanimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 3;
+    animation-delay: 0;
+    animation-direction: normal; */
+    /* animation-name: coloranimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-direction: normal; */
+    animation: coloranimation 2s ease-in infinite 0s normal;
+}
+
+
+@keyframes coloranimation {
+    from{font-size: 20px;
+    background-color: blue;}
+    to{font-size: 40px;
+    background-color: green;}
+}
+
+/* @keyframes coloranimation{
+    from{background-color: blue;}
+    to{background-color: green;}
+} */
+
+h1 {
+    background-color: blue;
+    color: white;
+}
+
+@media(width: 400px) {
+    h1 {
+        background-color: red;
+    color: white;
+    }
+}
+
